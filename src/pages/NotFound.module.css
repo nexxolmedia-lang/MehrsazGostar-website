@@ -1,0 +1,33 @@
+.wrap {
+  padding-block: clamp(4rem, 2rem + 8vw, 9rem);
+  background: var(--gradient-canvas);
+  min-block-size: 60vh;
+}
+
+.inner {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-4);
+}
+
+.mark {
+  inline-size: 12rem;
+  block-size: auto;
+  color: var(--color-ink);
+  margin-block-end: var(--space-4);
+}
+
+.title {
+  max-inline-size: 36rem;
+}
+
+.text {
+  max-inline-size: 34rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-block-start: var(--space-4);
+}

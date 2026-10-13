@@ -1,0 +1,125 @@
+.sheet {
+  position: fixed;
+  inset: 0;
+  inline-size: 100%;
+  max-inline-size: none;
+  block-size: 100dvh;
+  max-block-size: none;
+  margin: 0;
+  background: var(--color-canvas);
+  background-image: var(--gradient-canvas);
+}
+
+.sheet[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.sheet::backdrop {
+  background: rgba(23, 42, 58, 0.3);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sheet[open] {
+    animation: sheet-in var(--motion-standard) var(--ease-emphasized);
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  block-size: var(--header-height);
+  padding-inline: var(--gutter);
+  border-block-end: var(--border-hairline);
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  inline-size: var(--touch-target);
+  block-size: var(--touch-target);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.close svg {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-5) var(--gutter) var(--space-2);
+  min-block-size: 3.25rem;
+  padding-inline: var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  text-align: start;
+}
+
+.search svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-icon-muted);
+}
+
+.nav {
+  padding-inline: var(--gutter);
+  overflow-y: auto;
+}
+
+.nav ul {
+  margin: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-block-size: 4rem;
+  border-block-end: var(--border-hairline);
+  color: var(--color-ink);
+  font-size: 1.375rem;
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+}
+
+.link svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-icon-muted);
+}
+
+.link[aria-current='page'] {
+  color: var(--color-brand-primary);
+}
+
+.link[aria-current='page'] svg {
+  color: var(--color-brand-primary);
+}
+
+.bottom {
+  margin-block-start: auto;
+  padding: var(--space-6) var(--gutter) max(var(--space-6), env(safe-area-inset-bottom));
+}
+
+.note {
+  margin-block-end: var(--space-3);
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+}

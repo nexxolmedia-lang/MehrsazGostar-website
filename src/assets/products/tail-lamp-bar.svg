@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Temporary illustrative rendering (Nexxol Media demo). Not a real product. -->
+  <defs>
+    <filter id="soft" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="glow" x="-10%" y="-80%" width="120%" height="260%"><feGaussianBlur stdDeviation="7"/></filter>
+    <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9eff3"/><stop offset=".5" stop-color="#b6c3cd"/><stop offset="1" stop-color="#76889a"/></linearGradient>
+    <linearGradient id="smoke" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a1d22"/><stop offset=".55" stop-color="#3d1015"/><stop offset="1" stop-color="#22080b"/></linearGradient>
+    <linearGradient id="led" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff7a72"/><stop offset=".5" stop-color="#ff4a45"/><stop offset="1" stop-color="#e2302f"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".32"/><stop offset=".45" stop-color="#ffffff" stop-opacity=".03"/><stop offset="1" stop-color="#ffffff" stop-opacity=".08"/></linearGradient>
+    <clipPath id="inner"><path d="M70 268C70 252 82 240 98 239L716 222C730 222 738 232 734 246L712 330C708 344 696 352 682 352L98 364C82 364 70 352 70 336Z"/></clipPath>
+  </defs>
+  <ellipse cx="404" cy="414" rx="330" ry="16" fill="#172a3a" opacity=".22" filter="url(#soft)"/>
+  <path d="M52 262C52 240 70 224 92 223L724 204C746 204 760 220 754 242L728 338C722 360 704 372 682 372L92 384C70 384 52 368 52 346Z" fill="url(#shell)"/>
+  <path d="M56 248C62 234 76 224 92 223L724 204C740 204 752 212 755 226" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="2"/>
+  <path d="M70 268C70 252 82 240 98 239L716 222C730 222 738 232 734 246L712 330C708 344 696 352 682 352L98 364C82 364 70 352 70 336Z" fill="url(#smoke)"/>
+  <g clip-path="url(#inner)">
+    <g stroke="#ff8a80" stroke-opacity=".22" stroke-width="2" fill="none">
+      <path d="M90 330L120 300L90 270"/><path d="M130 330L160 300L130 270"/><path d="M170 330L200 300L170 270"/><path d="M210 330L240 300L210 270"/><path d="M250 330L280 300L250 270"/><path d="M290 330L320 300L290 270"/>
+      <path d="M480 326L510 296L480 266"/><path d="M520 324L550 294L520 264"/><path d="M560 322L590 292L560 262"/><path d="M600 320L630 290L600 260"/><path d="M640 318L670 288L640 258"/>
+    </g>
+    <rect x="352" y="262" width="96" height="70" rx="6" fill="#e8eef2" opacity=".92"/>
+    <g stroke="#9fb2c1" stroke-width="1.5"><path d="M368 262V332"/><path d="M384 262V332"/><path d="M400 262V332"/><path d="M416 262V332"/><path d="M432 262V332"/></g>
+    <path d="M86 262L344 255M456 252L714 244" stroke="#ff4a45" stroke-width="22" stroke-linecap="round" opacity=".55" filter="url(#glow)"/>
+    <path d="M86 262L344 255M456 252L714 244" stroke="url(#led)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M86 262L344 255M456 252L714 244" stroke="#ffd9d5" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+    <rect width="800" height="600" fill="url(#glass)"/>
+    <path d="M100 246L700 230" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+  </g>
+  <path d="M70 268C70 252 82 240 98 239L716 222C730 222 738 232 734 246L712 330C708 344 696 352 682 352L98 364C82 364 70 352 70 336Z" fill="none" stroke="#0a0406" stroke-opacity=".5" stroke-width="2"/>
+</svg>

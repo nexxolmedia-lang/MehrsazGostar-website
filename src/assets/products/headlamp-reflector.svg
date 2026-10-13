@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Temporary illustrative rendering (Nexxol Media demo). Not a real product. -->
+  <defs>
+    <filter id="soft" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
+    <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef3f6"/><stop offset=".45" stop-color="#bfcbd4"/><stop offset="1" stop-color="#7a8b99"/></linearGradient>
+    <linearGradient id="cavity" x1="0" y1="0" x2=".2" y2="1"><stop offset="0" stop-color="#3a5165"/><stop offset="1" stop-color="#132230"/></linearGradient>
+    <radialGradient id="refl" cx=".46" cy=".42" r=".6"><stop offset="0" stop-color="#ffffff"/><stop offset=".28" stop-color="#e2e9ee"/><stop offset=".65" stop-color="#9aabb8"/><stop offset="1" stop-color="#4c6276"/></radialGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2cf9f"/><stop offset=".5" stop-color="#d99338"/><stop offset="1" stop-color="#9c611b"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".34"/><stop offset=".4" stop-color="#ffffff" stop-opacity=".04"/><stop offset="1" stop-color="#c9e7f7" stop-opacity=".12"/></linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8fa1af"/><stop offset=".5" stop-color="#f4f7f9"/><stop offset="1" stop-color="#8fa1af"/></linearGradient>
+    <clipPath id="inner"><path d="M126 214C126 196 140 184 158 183L650 170C668 170 682 182 682 200L676 384C676 402 662 414 644 415L158 424C140 424 126 412 126 394Z"/></clipPath>
+  </defs>
+  <ellipse cx="404" cy="470" rx="300" ry="20" fill="#172a3a" opacity=".22" filter="url(#soft)"/>
+  <path d="M106 206C106 182 124 166 148 165L658 150C684 150 702 168 702 194L696 392C695 418 676 436 650 436L150 446C124 446 106 428 106 402Z" fill="url(#shell)"/>
+  <path d="M110 196C114 178 128 166 148 165L658 150C680 150 696 162 700 180" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="2"/>
+  <path d="M126 214C126 196 140 184 158 183L650 170C668 170 682 182 682 200L676 384C676 402 662 414 644 415L158 424C140 424 126 412 126 394Z" fill="url(#cavity)"/>
+  <g clip-path="url(#inner)">
+    <ellipse cx="320" cy="300" rx="178" ry="140" fill="url(#refl)"/>
+    <g stroke="#56697b" stroke-opacity=".14" stroke-width="1.2" fill="none">
+      <path d="M320 300L142 300"/><path d="M320 300L160 220"/><path d="M320 300L220 168"/><path d="M320 300L320 160"/><path d="M320 300L420 168"/><path d="M320 300L480 220"/><path d="M320 300L498 300"/><path d="M320 300L480 380"/><path d="M320 300L420 432"/><path d="M320 300L320 440"/><path d="M320 300L220 432"/><path d="M320 300L160 380"/>
+      <ellipse cx="320" cy="300" rx="120" ry="94"/><ellipse cx="320" cy="300" rx="66" ry="52"/>
+    </g>
+    <circle cx="320" cy="300" r="30" fill="#dfe7ed" stroke="#8fa1af" stroke-width="3"/>
+    <path d="M298 300a22 22 0 0 1 44 0z" fill="#6f8395"/>
+    <ellipse cx="310" cy="290" rx="8" ry="4" fill="#fff" opacity=".9"/>
+    <rect x="512" y="170" width="10" height="260" fill="url(#chrome)" opacity=".9"/>
+    <rect x="522" y="170" width="170" height="260" fill="url(#amber)" opacity=".9"/>
+    <g stroke="#fff" stroke-opacity=".25" stroke-width="2"><path d="M522 200H692"/><path d="M522 230H692"/><path d="M522 260H692"/><path d="M522 290H692"/><path d="M522 320H692"/><path d="M522 350H692"/><path d="M522 380H692"/></g>
+    <circle cx="600" cy="300" r="34" fill="#f7e2c3" opacity=".55"/>
+    <rect width="800" height="600" fill="url(#glass)"/>
+    <path d="M150 230C260 200 480 192 660 190" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+  </g>
+  <path d="M126 214C126 196 140 184 158 183L650 170C668 170 682 182 682 200L676 384C676 402 662 414 644 415L158 424C140 424 126 412 126 394Z" fill="none" stroke="#0a141c" stroke-opacity=".5" stroke-width="2"/>
+</svg>

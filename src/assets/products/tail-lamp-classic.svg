@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Temporary illustrative rendering (Nexxol Media demo). Not a real product. -->
+  <defs>
+    <filter id="soft" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
+    <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9eff3"/><stop offset=".5" stop-color="#b6c3cd"/><stop offset="1" stop-color="#76889a"/></linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9474a"/><stop offset=".5" stop-color="#a5232a"/><stop offset="1" stop-color="#6b1218"/></linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2cf9f"/><stop offset=".5" stop-color="#d99338"/><stop offset="1" stop-color="#9c611b"/></linearGradient>
+    <linearGradient id="clear" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#dfe8ee"/><stop offset="1" stop-color="#aebdc9"/></linearGradient>
+    <pattern id="prism" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 8L8 0L16 8L8 16Z" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="1.2"/></pattern>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".3"/><stop offset=".4" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    <clipPath id="inner"><path d="M180 150L612 150C632 150 644 164 642 184L628 300L520 300C506 300 496 310 496 324L496 440C496 456 484 466 468 466L196 466C178 466 166 454 166 436L166 166C166 156 172 150 180 150Z"/></clipPath>
+  </defs>
+  <ellipse cx="400" cy="500" rx="260" ry="18" fill="#172a3a" opacity=".22" filter="url(#soft)"/>
+  <path d="M170 132L620 132C648 132 666 154 662 182L646 314L536 316C524 316 516 324 516 336L516 448C516 470 498 486 476 486L188 486C164 486 146 468 146 444L146 158C146 142 156 132 170 132Z" fill="url(#shell)"/>
+  <path d="M150 150C152 140 160 132 170 132L620 132C640 132 656 144 661 162" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="2"/>
+  <g clip-path="url(#inner)">
+    <rect x="160" y="140" width="500" height="340" fill="url(#red)"/>
+    <rect x="160" y="140" width="500" height="340" fill="url(#prism)"/>
+    <rect x="166" y="300" width="330" height="76" fill="url(#amber)"/>
+    <rect x="166" y="300" width="330" height="76" fill="url(#prism)"/>
+    <rect x="350" y="376" width="146" height="90" fill="url(#clear)"/>
+    <g stroke="#9fb2c1" stroke-opacity=".7" stroke-width="1.2"><path d="M370 376V466"/><path d="M394 376V466"/><path d="M418 376V466"/><path d="M442 376V466"/><path d="M466 376V466"/></g>
+    <path d="M166 300H496M166 376H496M350 376V466" stroke="#3d0e12" stroke-opacity=".55" stroke-width="3"/>
+    <circle cx="300" cy="222" r="46" fill="#ff8b85" opacity=".35"/>
+    <circle cx="300" cy="222" r="16" fill="#ffd2cf" opacity=".6"/>
+    <circle cx="260" cy="338" r="22" fill="#f7e2c3" opacity=".5"/>
+    <rect x="160" y="140" width="500" height="340" fill="url(#glass)"/>
+    <path d="M190 170L600 166" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+  </g>
+  <path d="M180 150L612 150C632 150 644 164 642 184L628 300L520 300C506 300 496 310 496 324L496 440C496 456 484 466 468 466L196 466C178 466 166 454 166 436L166 166C166 156 172 150 180 150Z" fill="none" stroke="#2a090c" stroke-opacity=".55" stroke-width="2"/>
+</svg>

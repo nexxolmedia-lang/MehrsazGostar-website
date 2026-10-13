@@ -1,0 +1,238 @@
+.dialog {
+  inline-size: min(40rem, calc(100vw - 2rem));
+  max-inline-size: none;
+  max-block-size: calc(100dvh - 4rem);
+  margin-block-start: clamp(1rem, 10vh, 6rem);
+  margin-inline: auto;
+  border-radius: var(--radius-panel);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-panel);
+  overflow: hidden;
+}
+
+.dialog::backdrop {
+  background: rgba(23, 42, 58, 0.32);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dialog[open] {
+    animation: drop-in var(--motion-standard) var(--ease-emphasized);
+  }
+  .dialog[open]::backdrop {
+    animation: fade var(--motion-standard) var(--ease-standard);
+  }
+}
+
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  max-block-size: inherit;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-inline: var(--space-5) var(--space-3);
+  border-block-end: var(--border-hairline);
+}
+
+.icon {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-icon-muted);
+  flex: none;
+}
+
+.input {
+  flex: 1;
+  min-inline-size: 0;
+  block-size: 4rem;
+  border: 0;
+  background: transparent;
+  font-size: 1.0625rem;
+  color: var(--color-ink);
+}
+
+.input:focus-visible {
+  box-shadow: none;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  inline-size: var(--touch-target);
+  block-size: var(--touch-target);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.close:hover {
+  background: var(--color-surface-sunken);
+  color: var(--color-ink);
+}
+
+.close svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+
+.body {
+  padding: var(--space-5);
+  overflow-y: auto;
+}
+
+.groupLabel {
+  margin-block-end: var(--space-3);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+}
+
+.sample {
+  font-weight: var(--weight-regular);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-end: var(--space-5);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.5rem;
+  padding-inline: var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-pill);
+  color: var(--color-text);
+  font-size: var(--text-small);
+  text-decoration: none;
+  transition: border-color var(--motion-fast) var(--ease-standard);
+}
+
+.chip:hover {
+  border-color: var(--color-brand-primary);
+  color: var(--color-ink);
+}
+
+.hint {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+}
+
+.results {
+  display: grid;
+  gap: var(--space-1);
+  margin-block-end: var(--space-3);
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2);
+  border-radius: var(--radius-control);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.result:hover {
+  background: var(--color-surface-tinted);
+}
+
+.thumb {
+  display: grid;
+  place-items: center;
+  inline-size: 4rem;
+  block-size: 3rem;
+  flex: none;
+  border-radius: var(--radius-sm);
+  background: var(--gradient-frame);
+  border: var(--border-hairline);
+}
+
+.thumb img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+}
+
+.resultText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-inline-size: 0;
+  line-height: 1.6;
+}
+
+.resultName {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-small);
+}
+
+.resultCode {
+  align-self: flex-start;
+  font-size: var(--text-micro);
+  color: var(--color-text-muted);
+}
+
+.resultArrow {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-icon-muted);
+}
+
+.all {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-block-size: var(--touch-target);
+  padding-inline: var(--space-2);
+  border: 0;
+  background: transparent;
+  color: var(--color-brand-primary);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-small);
+}
+
+.all svg {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+
+.empty {
+  padding-block: var(--space-4);
+}
+
+.emptyTitle {
+  font-weight: var(--weight-semibold);
+  color: var(--color-ink);
+  margin-block-end: var(--space-1);
+}

@@ -1,0 +1,79 @@
+.field {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+}
+
+.control {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  inset-inline-start: var(--space-4);
+  inset-block-start: 50%;
+  translate: 0 -50%;
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-icon-muted);
+  pointer-events: none;
+}
+
+.input {
+  inline-size: 100%;
+  block-size: var(--control-height);
+  padding-inline: calc(var(--space-4) * 2 + 1.25rem) calc(var(--touch-target) + var(--space-1));
+  border: var(--border-strong);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  font-size: 1rem;
+  color: var(--color-ink);
+  transition: border-color var(--motion-fast) var(--ease-standard);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.input:hover {
+  border-color: var(--brand-titanium);
+}
+
+.input:focus-visible {
+  border-color: var(--color-brand-primary);
+  box-shadow: 0 0 0 3px rgba(49, 95, 234, 0.18);
+  border-radius: var(--radius-control);
+}
+
+.clear {
+  position: absolute;
+  inset-inline-end: 2px;
+  inset-block-start: 50%;
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  inline-size: var(--touch-target);
+  block-size: var(--touch-target);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.clear:hover {
+  color: var(--color-ink);
+}
+
+.clear svg {
+  inline-size: 1.125rem;
+  block-size: 1.125rem;
+}

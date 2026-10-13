@@ -1,0 +1,40 @@
+.logo {
+  --logo-beam: var(--color-brand-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-ink);
+}
+
+.mark {
+  inline-size: 2.5rem;
+  block-size: auto;
+  flex: none;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: var(--weight-heavy);
+  letter-spacing: -0.005em;
+}
+
+.tagline {
+  font-size: var(--text-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+}
+
+.light {
+  --logo-beam: var(--brand-ice);
+  color: var(--color-on-ink);
+}
+
+.light .tagline {
+  color: var(--color-on-ink-muted);
+}

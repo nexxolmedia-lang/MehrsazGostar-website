@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Temporary illustrative rendering (Nexxol Media demo). Not a real product. -->
+  <defs>
+    <filter id="soft" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="14"/></filter>
+    <linearGradient id="bezel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".4" stop-color="#b9c6d0"/><stop offset=".7" stop-color="#7a8b99"/><stop offset="1" stop-color="#dfe7ed"/></linearGradient>
+    <radialGradient id="refl" cx=".44" cy=".4" r=".62"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#d8e1e8"/><stop offset=".75" stop-color="#7d90a0"/><stop offset="1" stop-color="#2c4053"/></radialGradient>
+    <radialGradient id="led" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#e8f2f8"/><stop offset="1" stop-color="#c9e7f7" stop-opacity="0"/></radialGradient>
+    <linearGradient id="bracket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a5f72"/><stop offset="1" stop-color="#1f3142"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".4"/><stop offset=".45" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <ellipse cx="400" cy="508" rx="200" ry="18" fill="#172a3a" opacity=".24" filter="url(#soft)"/>
+  <path d="M310 420H490L470 494H330Z" fill="url(#bracket)"/>
+  <rect x="300" y="486" width="200" height="14" rx="4" fill="#2a3e50"/>
+  <circle cx="400" cy="466" r="9" fill="#9aabb8"/>
+  <circle cx="400" cy="282" r="182" fill="#1b2b3a"/>
+  <circle cx="400" cy="282" r="172" fill="url(#bezel)"/>
+  <circle cx="400" cy="282" r="150" fill="#15222f"/>
+  <circle cx="400" cy="282" r="142" fill="url(#refl)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".32" stroke-width="1.6">
+    <circle cx="400" cy="282" r="128"/><circle cx="400" cy="282" r="112"/><circle cx="400" cy="282" r="96"/><circle cx="400" cy="282" r="80"/><circle cx="400" cy="282" r="64"/><circle cx="400" cy="282" r="48"/>
+  </g>
+  <g fill="none" stroke="#3d5366" stroke-opacity=".25" stroke-width="1"><circle cx="400" cy="282" r="120"/><circle cx="400" cy="282" r="104"/><circle cx="400" cy="282" r="88"/><circle cx="400" cy="282" r="72"/></g>
+  <circle cx="400" cy="282" r="40" fill="url(#led)"/>
+  <rect x="386" y="268" width="28" height="28" rx="4" fill="#fff8e6" stroke="#c9b98f" stroke-width="2"/>
+  <rect x="393" y="275" width="14" height="14" rx="2" fill="#f2d98b"/>
+  <circle cx="400" cy="282" r="142" fill="url(#glass)"/>
+  <path d="M296 196A142 142 0 0 1 452 148" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+</svg>

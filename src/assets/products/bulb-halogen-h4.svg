@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Temporary illustrative rendering (Nexxol Media demo). Not a real product. -->
+  <defs>
+    <filter id="soft" x="-20%" y="-80%" width="140%" height="260%"><feGaussianBlur stdDeviation="12"/></filter>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset=".3" stop-color="#e8f2f8" stop-opacity=".55"/><stop offset=".7" stop-color="#c9e7f7" stop-opacity=".45"/><stop offset="1" stop-color="#8fb0c6" stop-opacity=".7"/></linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f7f9"/><stop offset=".5" stop-color="#a7b6c2"/><stop offset="1" stop-color="#5e7284"/></linearGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4f62"/><stop offset=".5" stop-color="#22374a"/><stop offset="1" stop-color="#132230"/></linearGradient>
+  </defs>
+  <ellipse cx="400" cy="398" rx="270" ry="14" fill="#172a3a" opacity=".22" filter="url(#soft)"/>
+  <path d="M150 254C150 236 164 226 184 226L360 232C392 233 410 252 410 274L410 324C410 346 392 365 360 366L184 372C164 372 150 362 150 344Z" fill="url(#glass)" stroke="#9fb7c8" stroke-width="2"/>
+  <path d="M150 254C150 236 164 226 184 226L196 226V372L184 372C164 372 150 362 150 344Z" fill="#1d2e3e"/>
+  <path d="M232 318H372" stroke="#8a9cab" stroke-width="3"/>
+  <path d="M250 296C256 290 262 302 268 296S280 302 286 296S298 302 304 296S316 302 322 296" fill="none" stroke="#c8a24a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M262 274C268 268 274 280 280 274S292 280 298 274S310 280 316 274S328 280 334 274" fill="none" stroke="#c8a24a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M322 296H392M334 274H392M250 296L236 318" stroke="#8a9cab" stroke-width="2.4" fill="none"/>
+  <path d="M206 246C250 240 320 242 380 250" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+  <rect x="410" y="252" width="36" height="94" rx="4" fill="url(#steel)"/>
+  <rect x="446" y="214" width="16" height="170" rx="4" fill="url(#steel)"/>
+  <path d="M446 214L436 196H452L462 214Z" fill="#a7b6c2"/>
+  <rect x="462" y="248" width="120" height="102" rx="8" fill="url(#base)"/>
+  <path d="M470 258H574" stroke="#fff" stroke-opacity=".25" stroke-width="2"/>
+  <rect x="582" y="262" width="56" height="12" rx="2" fill="url(#steel)"/>
+  <rect x="582" y="294" width="62" height="12" rx="2" fill="url(#steel)"/>
+  <rect x="582" y="326" width="56" height="12" rx="2" fill="url(#steel)"/>
+</svg>

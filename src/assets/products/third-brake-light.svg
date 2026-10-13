@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Temporary illustrative rendering (Nexxol Media demo). Not a real product. -->
+  <defs>
+    <filter id="soft" x="-20%" y="-80%" width="140%" height="260%"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="glow" x="-10%" y="-100%" width="120%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4f62"/><stop offset=".5" stop-color="#1d2e3e"/><stop offset="1" stop-color="#0f1b26"/></linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a2228"/><stop offset="1" stop-color="#3d1015"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".35"/><stop offset=".55" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <ellipse cx="400" cy="384" rx="320" ry="12" fill="#172a3a" opacity=".2" filter="url(#soft)"/>
+  <path d="M200 330H260L268 362H192Z" fill="#2a3e50"/>
+  <path d="M540 330H600L608 362H532Z" fill="#2a3e50"/>
+  <path d="M84 268C84 252 96 240 112 240H688C704 240 716 252 716 268V316C716 330 704 340 690 340H110C96 340 84 330 84 316Z" fill="url(#body)"/>
+  <path d="M100 262C100 256 106 254 112 254H688C694 254 700 256 700 262V306C700 314 694 318 688 318H112C106 318 100 314 100 306Z" fill="url(#lens)"/>
+  <g fill="#ff4a45" filter="url(#glow)" opacity=".75">
+    <rect x="124" y="278" width="20" height="16" rx="3"/><rect x="164" y="278" width="20" height="16" rx="3"/><rect x="204" y="278" width="20" height="16" rx="3"/><rect x="244" y="278" width="20" height="16" rx="3"/><rect x="284" y="278" width="20" height="16" rx="3"/><rect x="324" y="278" width="20" height="16" rx="3"/><rect x="364" y="278" width="20" height="16" rx="3"/><rect x="404" y="278" width="20" height="16" rx="3"/><rect x="444" y="278" width="20" height="16" rx="3"/><rect x="484" y="278" width="20" height="16" rx="3"/><rect x="524" y="278" width="20" height="16" rx="3"/><rect x="564" y="278" width="20" height="16" rx="3"/><rect x="604" y="278" width="20" height="16" rx="3"/><rect x="644" y="278" width="20" height="16" rx="3"/>
+  </g>
+  <g fill="#ffc9c4">
+    <rect x="129" y="282" width="10" height="8" rx="2"/><rect x="169" y="282" width="10" height="8" rx="2"/><rect x="209" y="282" width="10" height="8" rx="2"/><rect x="249" y="282" width="10" height="8" rx="2"/><rect x="289" y="282" width="10" height="8" rx="2"/><rect x="329" y="282" width="10" height="8" rx="2"/><rect x="369" y="282" width="10" height="8" rx="2"/><rect x="409" y="282" width="10" height="8" rx="2"/><rect x="449" y="282" width="10" height="8" rx="2"/><rect x="489" y="282" width="10" height="8" rx="2"/><rect x="529" y="282" width="10" height="8" rx="2"/><rect x="569" y="282" width="10" height="8" rx="2"/><rect x="609" y="282" width="10" height="8" rx="2"/><rect x="649" y="282" width="10" height="8" rx="2"/>
+  </g>
+  <path d="M100 262C100 256 106 254 112 254H688C694 254 700 256 700 262V306C700 314 694 318 688 318H112C106 318 100 314 100 306Z" fill="url(#glass)"/>
+  <path d="M110 250H690" stroke="#fff" stroke-opacity=".45" stroke-width="2"/>
+</svg>

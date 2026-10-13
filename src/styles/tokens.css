@@ -1,0 +1,175 @@
+/*
+ * Design tokens — "Luminous Precision"
+ * Contrast notes (WCAG 2.x, computed):
+ *  - Titanium Grey #738392 is 3.7:1 on Porcelain and 3.4:1 on Glacier, so it fails AA
+ *    for body text. It is kept for non-text UI (icons, hairline ticks; >= 3:1).
+ *    Readable secondary text uses the darker --color-text-muted #5E6E7C (5.0:1 on Porcelain,
+ *    4.65:1 on Glacier, 5.25:1 on white).
+ *  - Electric Cobalt #315FEA: 5.3:1 on white, 5.1:1 on Porcelain, 4.7:1 on Glacier.
+ *  - On Deep Ink Navy, secondary text uses #A9B7C3 (7.2:1).
+ *  - Ice Blue and Signal Amber are never used for readable text.
+ */
+:root {
+  /* Brand palette */
+  --brand-porcelain: #f8fafc;
+  --brand-optical-white: #ffffff;
+  --brand-glacier: #e8f2f8;
+  --brand-ink: #172a3a;
+  --brand-cobalt: #315fea;
+  --brand-ice: #c9e7f7;
+  --brand-titanium: #738392;
+  --brand-border: #dce5eb;
+  --brand-amber: #d99338;
+
+  /* Semantic colors */
+  --color-canvas: var(--brand-porcelain);
+  --color-surface: var(--brand-optical-white);
+  --color-surface-tinted: var(--brand-glacier);
+  --color-surface-sunken: #f1f5f8;
+  --color-ink: var(--brand-ink);
+  --color-text: #24384a;
+  --color-text-muted: #5e6e7c;
+  --color-icon-muted: var(--brand-titanium);
+  --color-border: var(--brand-border);
+  --color-border-strong: #c3d0da;
+  --color-brand-primary: var(--brand-cobalt);
+  --color-brand-primary-hover: #2550d1;
+  --color-brand-primary-pressed: #1f45b5;
+  --color-brand-primary-soft: #eef3fe;
+  --color-luminous: var(--brand-ice);
+  --color-signal: var(--brand-amber);
+  --color-error: #b42318;
+  --color-error-soft: #fdf1f0;
+  --color-success: #1d6b47;
+  --color-success-soft: #eef7f2;
+
+  /* On dark (Deep Ink Navy) */
+  --color-on-ink: #f3f7fa;
+  --color-on-ink-muted: #a9b7c3;
+  --color-on-ink-border: rgba(201, 231, 247, 0.16);
+
+  /* Light fields: barely perceptible, only to suggest light through glass */
+  --gradient-canvas: linear-gradient(180deg, var(--brand-porcelain) 0%, var(--brand-glacier) 100%);
+  --gradient-light-field: radial-gradient(
+    60% 55% at 50% 48%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.55) 38%,
+    rgba(232, 242, 248, 0) 72%
+  );
+  --gradient-frame: radial-gradient(75% 70% at 50% 45%, #ffffff 0%, #f6f9fb 60%, #eef4f8 100%);
+
+  /* Typography */
+  --font-fa: 'Vazirmatn Variable', 'Vazirmatn', Tahoma, system-ui, sans-serif;
+  --font-latin: 'Inter Variable', 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-heavy: 800;
+
+  --text-hero: clamp(2.375rem, 1.4rem + 3.5vw, 4.75rem);
+  --text-page-title: clamp(2rem, 1.45rem + 2.2vw, 3.25rem);
+  --text-section: clamp(1.625rem, 1.25rem + 1.5vw, 2.5rem);
+  --text-category: clamp(1.25rem, 1.08rem + 0.7vw, 1.625rem);
+  --text-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --text-product: 1.0625rem;
+  --text-body: 1rem;
+  --text-label: 0.9375rem;
+  --text-nav: 0.9375rem;
+  --text-small: 0.875rem;
+  --text-caption: 0.8125rem;
+  --text-micro: 0.75rem;
+
+  --leading-tight: 1.3;
+  --leading-heading: 1.45;
+  --leading-body: 1.95;
+  --tracking-latin-caps: 0.06em;
+
+  --measure-narrow: 34rem;
+  --measure-body: 40rem;
+
+  /* Spacing scale (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-section: clamp(4rem, 2.6rem + 5.5vw, 8rem);
+  --space-section-tight: clamp(3rem, 2.2rem + 3vw, 5rem);
+
+  /* Layout */
+  --content-max: 80rem; /* 1280px */
+  --content-wide: 90rem;
+  --gutter: clamp(1rem, 0.4rem + 2.6vw, 3rem);
+  --grid-columns: 12;
+  --grid-gap: clamp(1rem, 0.6rem + 1.6vw, 2rem);
+  --header-height: 4.25rem;
+
+  /* Borders & radii — engineered, restrained */
+  --border-hairline: 1px solid var(--color-border);
+  --border-strong: 1px solid var(--color-border-strong);
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-control: 8px;
+  --radius-card: 10px;
+  --radius-panel: 14px;
+  --radius-pill: 999px;
+
+  /* Shadows — cool, low, soft */
+  --shadow-hairline: 0 1px 0 rgba(23, 42, 58, 0.04);
+  --shadow-card: 0 1px 2px rgba(23, 42, 58, 0.04), 0 4px 16px -8px rgba(23, 42, 58, 0.1);
+  --shadow-card-hover: 0 2px 4px rgba(23, 42, 58, 0.05), 0 14px 32px -16px rgba(23, 42, 58, 0.22);
+  --shadow-panel: 0 1px 2px rgba(23, 42, 58, 0.05), 0 24px 48px -28px rgba(23, 42, 58, 0.28);
+  --shadow-header: 0 1px 0 var(--color-border), 0 8px 24px -20px rgba(23, 42, 58, 0.35);
+
+  /* Focus */
+  --focus-ring: 0 0 0 2px var(--color-surface), 0 0 0 4px var(--color-brand-primary);
+
+  /* Z-index layers */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-header: 200;
+  --z-overlay: 900;
+  --z-dialog: 1000;
+  --z-skip: 1100;
+
+  /* Motion */
+  --motion-instant: 90ms;
+  --motion-fast: 160ms;
+  --motion-standard: 260ms;
+  --motion-slow: 520ms;
+  --motion-sweep: 2200ms;
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --ease-sweep: cubic-bezier(0.45, 0.05, 0.35, 1);
+
+  /* Interactive sizing */
+  --touch-target: 44px;
+  --control-height: 3rem;
+
+  /*
+   * Breakpoints (reference — CSS custom properties cannot be used inside @media):
+   *   sm 600px · md 768px · lg 1024px · xl 1280px · 2xl 1440px
+   */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-instant: 0ms;
+    --motion-fast: 0ms;
+    --motion-standard: 0ms;
+    --motion-slow: 0ms;
+    --motion-sweep: 0ms;
+  }
+}

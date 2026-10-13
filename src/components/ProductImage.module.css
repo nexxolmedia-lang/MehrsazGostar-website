@@ -1,0 +1,102 @@
+.frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  inline-size: 100%;
+  overflow: hidden;
+  background: var(--gradient-frame);
+  isolation: isolate;
+}
+
+.frame img {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+  padding: 6%;
+  opacity: 1;
+  transition:
+    opacity var(--motion-slow) var(--ease-standard),
+    transform var(--motion-slow) var(--ease-emphasized);
+}
+
+.frame[data-status='loading'] img {
+  opacity: 0;
+}
+
+/* Quiet loading surface: a static tint (no shimmer under reduced motion) */
+.frame[data-status='loading']::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.7) 50%, transparent 70%) no-repeat;
+  background-size: 200% 100%;
+  animation: shimmer 1400ms var(--ease-standard) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame[data-status='loading']::before {
+    animation: none;
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
+.detail img {
+  padding: 4%;
+}
+
+.feature img {
+  padding: 3%;
+}
+
+.missing {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--text-caption);
+  text-align: center;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 11px, rgba(220, 229, 235, 0.55) 11px 12px),
+    var(--color-surface-sunken);
+}
+
+.missing svg {
+  inline-size: 2rem;
+  block-size: 2rem;
+  color: var(--color-icon-muted);
+}
+
+.tag {
+  position: absolute;
+  inset-block-end: var(--space-3);
+  inset-inline-end: var(--space-3);
+  padding: 0.125rem var(--space-2);
+  border: var(--border-hairline);
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--color-text-muted);
+  font-size: var(--text-micro);
+  line-height: 1.6;
+}
+
+@media (max-width: 599px) {
+  .tag {
+    inset-block-end: var(--space-2);
+    inset-inline-end: var(--space-2);
+    padding-inline: var(--space-1);
+    font-size: 0.6875rem;
+  }
+}

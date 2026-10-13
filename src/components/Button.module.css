@@ -1,0 +1,144 @@
+.button {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-ink);
+  --btn-border: transparent;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-block-size: var(--touch-target);
+  padding-block: var(--space-2);
+  padding-inline: var(--space-5);
+  border: 1px solid var(--btn-border);
+  border-radius: var(--radius-control);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: var(--text-label);
+  font-weight: var(--weight-semibold);
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color var(--motion-fast) var(--ease-standard),
+    border-color var(--motion-fast) var(--ease-standard),
+    color var(--motion-fast) var(--ease-standard),
+    box-shadow var(--motion-fast) var(--ease-standard);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lg {
+  min-block-size: 3.25rem;
+  padding-inline: var(--space-6);
+  font-size: 1rem;
+}
+
+.sm {
+  min-block-size: 2.5rem;
+  padding-inline: var(--space-4);
+  font-size: var(--text-small);
+}
+
+.block {
+  inline-size: 100%;
+}
+
+/* Primary — Electric Cobalt */
+.primary {
+  --btn-bg: var(--color-brand-primary);
+  --btn-fg: #ffffff;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) inset, 0 6px 16px -10px rgba(49, 95, 234, 0.9);
+}
+
+.primary:hover {
+  --btn-bg: var(--color-brand-primary-hover);
+}
+
+.primary:active {
+  --btn-bg: var(--color-brand-primary-pressed);
+}
+
+/* Secondary — outline on surface */
+.secondary {
+  --btn-bg: var(--color-surface);
+  --btn-fg: var(--color-ink);
+  --btn-border: var(--color-border-strong);
+}
+
+.secondary:hover {
+  --btn-border: var(--color-ink);
+}
+
+.secondary:active {
+  --btn-bg: var(--color-surface-sunken);
+}
+
+/* Tertiary — text with arrow */
+.tertiary {
+  --btn-fg: var(--color-brand-primary);
+  padding-inline: var(--space-1);
+}
+
+.tertiary:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+}
+
+/* On dark surfaces */
+.onInk {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-on-ink);
+  --btn-border: rgba(243, 247, 250, 0.4);
+}
+
+.onInk:hover {
+  --btn-border: var(--color-on-ink);
+  --btn-bg: rgba(243, 247, 250, 0.06);
+}
+
+.button:focus-visible {
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-control);
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+.button[aria-busy='true'] {
+  cursor: progress;
+}
+
+/* Directional arrow: points toward reading direction (left in RTL) and nudges on hover */
+.arrow {
+  inline-size: 1.125em;
+  block-size: 1.125em;
+  flex: none;
+  transition: transform var(--motion-standard) var(--ease-emphasized);
+}
+
+.button:hover .arrow,
+.button:focus-visible .arrow {
+  transform: translateX(-3px);
+}
+
+.spinner {
+  inline-size: 1.1em;
+  block-size: 1.1em;
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 2400ms;
+  }
+}

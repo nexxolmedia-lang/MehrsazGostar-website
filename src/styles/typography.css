@@ -1,0 +1,76 @@
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-ink);
+  line-height: var(--leading-heading);
+  font-weight: var(--weight-bold);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.t-hero {
+  font-size: var(--text-hero);
+  font-weight: var(--weight-heavy);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+
+.t-page-title {
+  font-size: var(--text-page-title);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+}
+
+.t-section {
+  font-size: var(--text-section);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+}
+
+.t-category {
+  font-size: var(--text-category);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+}
+
+.t-lead {
+  font-size: var(--text-lead);
+  line-height: 1.95;
+  color: var(--color-text-muted);
+  max-width: var(--measure-body);
+}
+
+.t-body-muted {
+  color: var(--color-text-muted);
+}
+
+/* Eyebrow: a hairline "optical axis" tick followed by a short label */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.eyebrow::before {
+  content: '';
+  inline-size: 1.75rem;
+  block-size: 1px;
+  background: linear-gradient(to left, var(--color-brand-primary) 0 0.5rem, var(--brand-titanium) 0.5rem 100%);
+  flex: none;
+}
+
+.eyebrow--on-ink {
+  color: var(--color-on-ink-muted);
+}
+
+.eyebrow--on-ink::before {
+  background: linear-gradient(to left, var(--brand-ice) 0 0.5rem, rgba(201, 231, 247, 0.35) 0.5rem 100%);
+}
